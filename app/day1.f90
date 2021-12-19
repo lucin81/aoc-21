@@ -1,4 +1,4 @@
-program main
+program day1
   use m_aoc21, only: i4, nrows, diff, smooth_fw
   implicit none
 
@@ -27,4 +27,4 @@ program main
   print*, "Answer to part 2"
   print*, "Number of smoothed measurements larger than previous: ", count(d>0)
 
-end program main
+end program day1
