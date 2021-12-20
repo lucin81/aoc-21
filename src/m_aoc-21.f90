@@ -1,10 +1,10 @@
 module m_aoc21
-  use iso_fortran_env, only: i4 => int32
+  use iso_fortran_env, only: i4 => int32, i8 => int64
   implicit none
   private
 
-  public :: i4
-  public :: nrows, diff, smooth_fw
+  public :: i4, i8
+  public :: nrows, ncols, diff, smooth_fw
 contains
 
   integer function nrows(fname)
@@ -19,6 +19,21 @@ contains
       enddo
 200 close(iu)
   end function nrows
+
+  integer function ncols(fname)
+    character(len=*), intent(in) :: fname
+    character(len=200) :: string
+    integer(kind=i4) :: iu
+    
+    open(newunit=iu, file=trim(fname), action='read')
+      read(iu, *) string
+    close(iu)
+    ncols=1
+    do while (string(ncols:ncols) /= ' ')
+      ncols = ncols + 1
+    enddo
+    ncols = ncols - 1
+  end function ncols
 
   function diff(v) result(d)
     integer(kind=i4), allocatable :: d(:)
