@@ -11,7 +11,7 @@ program aoc_d3p1
   fname='/mnt/data/aoc-21/day3/input.txt'
 
   nr = nrows(fname)
-  nc = ncols(fname)
+  nc = ncols(fname, ' ')
   allocate(bits(nc, nr))
   open(newunit=iu, file=trim(fname), action='read', form='formatted', access='sequential')
     do j=1, nr 
