@@ -7,7 +7,7 @@ program aoc_d2p2
   character(len=:), allocatable :: direction, fname
   character(len=20) :: ctmp
 
-  fname='/mnt/data/aoc-21/day2/input.txt'
+  fname='inputs/day2/input.txt'
 
   n = nrows(fname)
   print*, n

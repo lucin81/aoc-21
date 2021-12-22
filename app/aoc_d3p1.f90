@@ -8,7 +8,7 @@ program aoc_d3p1
   character(len=200) :: string
   character(len=1), allocatable :: bits(:,:)
 
-  fname='/mnt/data/aoc-21/day3/input.txt'
+  fname='inputs/day3/input.txt'
 
   nr = nrows(fname)
   nc = ncols(fname, ' ')

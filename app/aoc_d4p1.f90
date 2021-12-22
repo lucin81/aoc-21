@@ -12,7 +12,7 @@ program aoc_d4p1
   character(len=:), allocatable :: fname
   character(len=500) :: string
 
-  fname='/mnt/data/aoc-21/day4/input.txt'
+  fname='inputs/day4/input.txt'
 
   ! One row for the draws and 1 blank line to separate boards
   nboards = (nrows(fname)-1) / (board_size + 1)

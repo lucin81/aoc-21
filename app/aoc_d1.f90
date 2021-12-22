@@ -6,7 +6,7 @@ program aoc_d1
   integer(kind=i4), allocatable :: v(:), d(:), v2(:)
   character(len=:), allocatable :: fname
 
-  fname='/mnt/data/aoc-21/day1/input.txt'
+  fname='inputs/day1/input.txt'
 
   n=nrows(fname)
   allocate(v(n))
